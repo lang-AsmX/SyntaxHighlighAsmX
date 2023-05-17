@@ -1,0 +1,60 @@
+{
+    "name": "AsmX",
+    "displayName": "%displayName%",
+    "description": "%description%",
+    "version": "1.0.0",
+    "publisher": "vscode",
+    "license": "MIT",
+
+    "engines": {
+        "vscode": "0.10.x"
+    },
+
+    "scripts": {
+        "update-grammar": "node ./build/update-grammar.mjs"
+    },
+
+    "contributes": {
+        "languages": [
+            {
+                "id": "AsmX",
+
+                "icon": {
+                    "light": "./icons/asmx.png",
+                    "dark": "./icons/asmx.png"
+                },
+
+                "extensions": [
+                    ".asmX"
+                ],
+
+                "mimetypes": [
+                    "text/template",
+                    "modern/asmx"
+                ],
+
+                "configuration": "./language-configuration.json"
+            }
+        ],
+
+        "grammars": [
+            {
+                "scopeName": "source.asmX",
+                "path": "./syntaxes/asmx.tmLanguage.json",
+                "embeddedLanguages": {
+                    "source.js": "javascript"
+                }
+            },
+            {
+                "language": "AsmX",
+                "scopeName": "source.asmX",
+                "path": "./syntaxes/asmx.tmLanguage.json"
+            }
+        ]
+    },
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+    }
+}
