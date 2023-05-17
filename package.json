@@ -3,11 +3,12 @@
     "displayName": "%displayName%",
     "description": "%description%",
     "version": "1.0.0",
-    "publisher": "vscode",
+    "publisher": "AsmX",
     "license": "MIT",
+    "icon": "images/asmx.png",
 
     "engines": {
-        "vscode": "0.10.x"
+        "vscode": "^0.10.0"
     },
 
     "scripts": {

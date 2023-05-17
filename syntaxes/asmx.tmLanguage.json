@@ -33,7 +33,11 @@
 
         {
             "include": "#grammar-using-instruction"
-        }
+        },
+
+		{
+			"include": "#grammar-constant"
+		}
     ],
 
     "repository" : {
@@ -116,6 +120,15 @@
                 }
             ]
         },
+
+		"grammar-constant": {
+			"patterns": [
+				{
+					"match": "([A-Z]+(_[A-Z]+)*)",
+					"name": "variable.other.constant.asmX"
+				}
+			]
+		},
 
         "ctrl-statements": {
             "patterns": [
