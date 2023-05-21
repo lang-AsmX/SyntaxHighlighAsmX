@@ -3,6 +3,33 @@
     "scopeName":"source.asmX",
 
     "patterns": [
+		{
+			"begin": "(^[ \\t]+)?(?=#)",
+
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.whitespace.comment.leading.asmX"
+				}
+			},
+
+			"end": "(?!\\G)",
+		
+			"patterns": [
+				{
+					"begin": "#",
+					
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.asmX"
+						}
+					},
+
+					"end": "\\n",
+					"name": "comment.line.number-sign.asmX"
+				}
+			]
+		},
+		
         {
             "include": "#ctrl-statements"
         },
@@ -36,11 +63,7 @@
         },
 
 		{
-			"include": "#grammar-constant"
-		},
-
-		{
-			"include": "#comments"
+			"include": "#types"
 		}
     ],
 
@@ -134,6 +157,15 @@
 			]
 		},
 
+		"types": {
+			"patterns": [
+				{
+					"match": "(String|Int|Float|Bool)",
+					"name": "entity.name.type.asmX"
+				}
+			]
+		},
+
         "ctrl-statements": {
             "patterns": [
                 {
@@ -191,7 +223,7 @@
 				{
 					"include": "#qstring-double"
 				},
-				
+
 				{
 					"include": "#template"
 				}
@@ -259,11 +291,6 @@
 		"string-character-escape": {
 			"name": "constant.character.escape.js",
 			"match": "\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|u\\{[0-9A-Fa-f]+\\}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.|$)"
-		},
-
-		"comments": {
-			"name": "comment.number-sign.asmX",
-			"match": "(?<![\"\\'])(#.*)(?<!\\)(?![\"\\'])"
 		}
     }
 }

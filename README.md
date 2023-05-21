@@ -5,8 +5,8 @@ This VS Code extension provides syntax highlighting for the AsmX programming lan
 Provides syntax highlighting for keywords, operators, labels and other language constructs.
 Colorizes comments and strings for easy readability.
 
-![EXAMPLE 1](examples/code.png)
-![EXAMPLE 2](examples/code1.png)
+![EXAMPLE 1](/examples/code.png)
+![EXAMPLE 2](/examples/code1.png)
 
 ## Usage
 Install the extension from the VS Code Marketplace.
