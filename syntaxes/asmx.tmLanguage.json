@@ -168,11 +168,6 @@
 
         "ctrl-statements": {
             "patterns": [
-                {
-                    "name": "keyword.control.asmX",
-                    "match": "(\\@[A|a]dd|\\@[S|s]ub|\\@[D|d]iv|\\@[M|m]od|\\@[M|m]ul)"
-                },
-
 				{
 					"name": "keyword.control.asmX",
 					"match": "\\b(\\@[U|u]nit)\\b(?![,:])"
